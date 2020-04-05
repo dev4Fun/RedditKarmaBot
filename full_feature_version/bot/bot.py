@@ -32,7 +32,7 @@ class RedditBot:
 
         self.all_bot_names = all_bot_names if all_bot_names else {username}
 
-        self.reddit_client = reddit_client if reddit_client else praw.Reddit(**self.credenqtials)
+        self.reddit_client = reddit_client if reddit_client else praw.Reddit(**self.credentials)
 
         self.is_broken = self.reddit_client.user.me().is_suspended
 
